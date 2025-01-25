@@ -9,6 +9,11 @@ readme = "README.md"
 python = "^3.13"
 django = "^5.1.4"
 nest-asyncio = "^1.6.0"
+dj-database-url = "*"
+psycopg2-binary = "*"
+whitenoise = {version = "*", extras = ["brotli"]}
+gunicorn = "*"
+uvicorn = "^0.34.0"
 
 
 [tool.poetry.group.dev.dependencies]
