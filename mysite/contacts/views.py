@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import permission_required
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.urls import reverse
@@ -6,7 +7,9 @@ from .forms import NameForm, ContactForm
 
 
 # Create your views here.
+@permission_required("contacts.add_contact")
 def create(request):
+
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
