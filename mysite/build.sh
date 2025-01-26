@@ -15,5 +15,5 @@ python manage.py migrate
 # Create superuser (depecrated)
 if [[ $CREATE_SUPERUSER ]];
 then
-  python manage.py createsuperuser --no-input --email
+  python manage.py createsuperuser --noinput --email 'eitaro1@gmail.com' --username 'eitaro' --password '123@mudar'
 fi
